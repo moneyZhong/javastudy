@@ -17,6 +17,8 @@ public class RedisOper {
         System.out.println(jedis.get("zq"));
 
 
+
+
         jedis.close();
     }
 }
