@@ -3,6 +3,7 @@ package com.study.javastudy.stream;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
+import org.junit.Test;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -18,10 +19,28 @@ public class MapStream {
         Optional<Integer> reduce = userList.stream().map(e -> e.getAge()).reduce((a, b) -> a + b);
         System.out.println(reduce.get());
 
+        Integer reduce1 = userList.stream().map(User::getAge).reduce(2, (x, y) -> x + y);
+        System.out.println(reduce1);
+
+        Optional<Integer> reduce2 = userList.stream().map(User::getAge).reduce(Integer::sum);
+        System.out.println(reduce2.get());
+
+        Integer reduce3 = userList.stream().map(User::getAge).reduce(0, Integer::sum);
+        System.out.println(reduce3);
+
+        IntSummaryStatistics collect = userList.stream().map(User::getAge).collect(Collectors.summarizingInt(Integer::intValue));
+        System.out.println(collect.getMax());
+        System.out.println(collect.getAverage());
+        System.out.println(collect.getMin());
+        System.out.println(collect.getCount());
+        System.out.println(collect.getSum());
+
+        //.map 对流中对象进行转化  .reduce 对流中元素进行递归处理  .collection 结果
 
     }
 
-    public static void test05(){
+    @Test
+    public  void test05(){
         List<Integer> inList = Arrays.asList(3,9,1,10,5,2);
         Integer integer = inList.stream().reduce((a, b) -> {
             System.out.println("a="+a+",b="+b); return a + b;}).get();
