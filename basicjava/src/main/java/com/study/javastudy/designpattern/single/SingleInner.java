@@ -9,4 +9,5 @@ public class SingleInner {
     private static SingleInner getInstance(){
         return SingleInnerTemp.singleInner;
     }
+
 }
