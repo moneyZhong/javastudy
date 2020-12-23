@@ -20,6 +20,8 @@
         <module>cloudalibaba-provider-payment</module>
         <module>cloudalibaba-consumer-order</module>
         <module>cloudalibaba-config</module>
+        <module>springboot-study</module>
+        <module>spring-boot-mybatis-plus</module>
     </modules>
     <name>javastudy</name>
     <description>Demo project for Spring Boot</description>
