@@ -111,7 +111,7 @@ public class QueryWapperTest {
         list.add("a");
         list.add("b");
         list.add("c");
-        String join = Joiner.on(",").join(list);
+        String join =  Joiner.on(",").join(list);
         System.out.println(join);
     }
 }

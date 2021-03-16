@@ -3,7 +3,9 @@ package com.study.mybatisplus.dao.dataobject;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
+import org.apache.ibatis.type.Alias;
 
+@Alias("user")
 @Data
 @TableName(value = "user")
 public class User {

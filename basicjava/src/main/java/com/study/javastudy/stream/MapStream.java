@@ -66,7 +66,8 @@ public class MapStream {
         System.out.println(collect);
     }
 
-    public static void test02(){
+    @Test
+    public  void test02(){
         List<String> stringList = Arrays.asList("1","","2323","ff");
         List<String> collect = stringList.stream().filter(e -> !e.isEmpty()).collect(Collectors.toList());
         String collect1 = stringList.stream().filter(e -> !e.isEmpty()).collect(Collectors.joining());

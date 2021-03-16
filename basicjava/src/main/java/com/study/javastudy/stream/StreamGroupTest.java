@@ -34,4 +34,13 @@ public class StreamGroupTest {
         Map<Integer, User> collect3 = list.stream().collect(Collectors.toMap(User::getAge, v -> v, (v1, v2) -> v1));
         System.out.println(collect3);
     }
+
+    @Test
+    public void test02(){
+        System.out.println(4 %3);
+        System.out.println(4 %2);
+        System.out.println(4 %1);
+        System.out.println(0 %3);
+        System.out.println(4 %3);
+    }
 }
